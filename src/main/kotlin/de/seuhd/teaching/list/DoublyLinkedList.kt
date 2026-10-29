@@ -10,6 +10,8 @@ class DoublyLinkedList {
         private set
     var length: Int = 0
         private set
+    var limit: Int = 0
+    	private set
 
     /**
      * Appends the value of [e] to the end of this list.
@@ -95,11 +97,11 @@ class DoublyLinkedList {
      * Returns the value at position [index].
      */
     fun get(index: Int): Double {
-        if (index > 1000) println("Index exceeds the limit")
+        if (index > limit) println("Index exceeds the limit")
         if (index < 0 || index >= length) {
-	throw IndexOutOfBoundsException("Index $index, size $length")
+            throw IndexOutOfBoundsException("Index $index, size $length")
         }
-	var element = begin
+        var element = begin
         repeat(index) { element = element!!.next }
         return element!!.value
     }
