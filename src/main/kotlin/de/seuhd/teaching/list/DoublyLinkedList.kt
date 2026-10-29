@@ -11,7 +11,7 @@ class DoublyLinkedList {
     var length: Int = 0
         private set
     var limit: Int = 0
-    	private set
+        private set
 
     /**
      * Appends the value of [e] to the end of this list.
